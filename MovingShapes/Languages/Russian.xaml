@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="circle">Круг</system:String>
+    <system:String x:Key="triangle">Треугольник</system:String>
+    <system:String x:Key="square">Квадрат</system:String>
+    <system:String x:Key="stop">Стоп</system:String>
+    <system:String x:Key="stopAll">Стоп все</system:String>
+    <system:String x:Key="run">Старт</system:String>
+    <system:String x:Key="runAll">Старт все</system:String>
+    <system:String x:Key="language">Russian</system:String>
+    <system:String x:Key="file">Файл</system:String>
+    <system:String x:Key="open">Открыть</system:String>
+    <system:String x:Key="save">Сохранить</system:String>
+
+</ResourceDictionary>

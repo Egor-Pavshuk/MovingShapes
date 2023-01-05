@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCustomShape xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>1</CurrentNumber>
+    <Position>
+      <X>179</X>
+      <Y>270</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>2</CurrentNumber>
+    <Position>
+      <X>159</X>
+      <Y>163</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>3</CurrentNumber>
+    <Position>
+      <X>163</X>
+      <Y>240</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>4</CurrentNumber>
+    <Position>
+      <X>63</X>
+      <Y>316</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>5</CurrentNumber>
+    <Position>
+      <X>225</X>
+      <Y>256</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>6</CurrentNumber>
+    <Position>
+      <X>39</X>
+      <Y>239</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>7</CurrentNumber>
+    <Position>
+      <X>70</X>
+      <Y>225</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>8</CurrentNumber>
+    <Position>
+      <X>71</X>
+      <Y>299</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>9</CurrentNumber>
+    <Position>
+      <X>70</X>
+      <Y>231</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>10</CurrentNumber>
+    <Position>
+      <X>38</X>
+      <Y>175</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>11</CurrentNumber>
+    <Position>
+      <X>283</X>
+      <Y>265</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>12</CurrentNumber>
+    <Position>
+      <X>53</X>
+      <Y>272</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>13</CurrentNumber>
+    <Position>
+      <X>63</X>
+      <Y>129</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>14</CurrentNumber>
+    <Position>
+      <X>13</X>
+      <Y>296</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>15</CurrentNumber>
+    <Position>
+      <X>75</X>
+      <Y>311</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>16</CurrentNumber>
+    <Position>
+      <X>391</X>
+      <Y>289</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>17</CurrentNumber>
+    <Position>
+      <X>233</X>
+      <Y>295</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>18</CurrentNumber>
+    <Position>
+      <X>146</X>
+      <Y>110</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>19</CurrentNumber>
+    <Position>
+      <X>465</X>
+      <Y>210</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>20</CurrentNumber>
+    <Position>
+      <X>76</X>
+      <Y>15</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>21</CurrentNumber>
+    <Position>
+      <X>473</X>
+      <Y>29</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>22</CurrentNumber>
+    <Position>
+      <X>398</X>
+      <Y>209</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>23</CurrentNumber>
+    <Position>
+      <X>119</X>
+      <Y>49</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>24</CurrentNumber>
+    <Position>
+      <X>49</X>
+      <Y>197</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>25</CurrentNumber>
+    <Position>
+      <X>83</X>
+      <Y>7</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>26</CurrentNumber>
+    <Position>
+      <X>312</X>
+      <Y>116</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>27</CurrentNumber>
+    <Position>
+      <X>421</X>
+      <Y>21</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>28</CurrentNumber>
+    <Position>
+      <X>112</X>
+      <Y>52</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>29</CurrentNumber>
+    <Position>
+      <X>129</X>
+      <Y>81</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>30</CurrentNumber>
+    <Position>
+      <X>453</X>
+      <Y>66</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>31</CurrentNumber>
+    <Position>
+      <X>255</X>
+      <Y>80</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>32</CurrentNumber>
+    <Position>
+      <X>164</X>
+      <Y>33</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>33</CurrentNumber>
+    <Position>
+      <X>239</X>
+      <Y>164</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>34</CurrentNumber>
+    <Position>
+      <X>430</X>
+      <Y>79</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>35</CurrentNumber>
+    <Position>
+      <X>488</X>
+      <Y>62</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>36</CurrentNumber>
+    <Position>
+      <X>337</X>
+      <Y>34</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>37</CurrentNumber>
+    <Position>
+      <X>456</X>
+      <Y>91</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>38</CurrentNumber>
+    <Position>
+      <X>226</X>
+      <Y>153</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>39</CurrentNumber>
+    <Position>
+      <X>347</X>
+      <Y>95</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>40</CurrentNumber>
+    <Position>
+      <X>253</X>
+      <Y>164</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>41</CurrentNumber>
+    <Position>
+      <X>484</X>
+      <Y>199</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>42</CurrentNumber>
+    <Position>
+      <X>360</X>
+      <Y>153</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>43</CurrentNumber>
+    <Position>
+      <X>249</X>
+      <Y>286</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>44</CurrentNumber>
+    <Position>
+      <X>473</X>
+      <Y>187</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>45</CurrentNumber>
+    <Position>
+      <X>460</X>
+      <Y>245</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>46</CurrentNumber>
+    <Position>
+      <X>0</X>
+      <Y>22</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>47</CurrentNumber>
+    <Position>
+      <X>31</X>
+      <Y>91</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>48</CurrentNumber>
+    <Position>
+      <X>111</X>
+      <Y>46</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>49</CurrentNumber>
+    <Position>
+      <X>127</X>
+      <Y>70</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>50</CurrentNumber>
+    <Position>
+      <X>298</X>
+      <Y>21</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>51</CurrentNumber>
+    <Position>
+      <X>268</X>
+      <Y>133</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>52</CurrentNumber>
+    <Position>
+      <X>252</X>
+      <Y>39</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>53</CurrentNumber>
+    <Position>
+      <X>43</X>
+      <Y>56</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>54</CurrentNumber>
+    <Position>
+      <X>146</X>
+      <Y>116</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>55</CurrentNumber>
+    <Position>
+      <X>191</X>
+      <Y>47</Y>
+    </Position>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>true</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>56</CurrentNumber>
+    <Position>
+      <X>198</X>
+      <Y>23</Y>
+    </Position>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>3</MoveStepY>
+  </CustomShape>
+</ArrayOfCustomShape>

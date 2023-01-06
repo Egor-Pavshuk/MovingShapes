@@ -1,11 +1,10 @@
 ﻿using MovingShapes.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml.Serialization;
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json;
 
 namespace MovingShapes.Resources
 {
@@ -42,7 +41,7 @@ namespace MovingShapes.Resources
             {
                 return new List<CustomShape>();
             }
-            
+
             using (Stream SaveFileStream = File.Open(_filePath + ".bin", FileMode.OpenOrCreate))
             {
                 BinaryFormatter serializer = new BinaryFormatter();
@@ -71,7 +70,7 @@ namespace MovingShapes.Resources
             {
                 return new List<CustomShape>();
             }
-            
+
             var xmlSerializer = new XmlSerializer(typeof(List<CustomShape>), new Type[] { typeof(CustomCircle), typeof(CustomSquare), typeof(CustomTriangle) });
             using (var reader = new StreamReader(_filePath + ".xml"))
             {
@@ -89,9 +88,9 @@ namespace MovingShapes.Resources
         public static void SerializeToJson(List<CustomShape> customShapes)
         {
             using (StreamWriter FileStreamWriter = new StreamWriter(_filePath + ".json"))
-            { 
+            {
                 JsonSerializer jsonSerializer = new();
-                jsonSerializer.TypeNameHandling= TypeNameHandling.Auto;
+                jsonSerializer.TypeNameHandling = TypeNameHandling.Auto;
                 using (JsonWriter writer = new JsonTextWriter(FileStreamWriter))
                 {
                     jsonSerializer.Serialize(writer, customShapes, typeof(List<CustomShape>));

@@ -1,6 +1,6 @@
-﻿using System;
+﻿using MovingShapes.Events;
+using System;
 using System.Runtime.Serialization;
-using System.Text.Json.Serialization;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -78,5 +78,10 @@ namespace MovingShapes.Models
             canvas.Children.Add(_rectangle);
             Draw();
         }
+
+        //public override void ShapesIntersected(object sender, ShapesIntersectionEventArgs e)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

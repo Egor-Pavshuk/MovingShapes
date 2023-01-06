@@ -27,7 +27,7 @@
         <Menu Grid.Column="0" Grid.ColumnSpan="2" Height="24" VerticalAlignment="Top">
             <MenuItem Header="{DynamicResource file}" FontSize="14">
                 <MenuItem x:Name="MenuOpen" Header="{DynamicResource open}">
-                    <MenuItem x:Name="OpenBin" Header=".bin" Click="OpenBin_Click">                        
+                    <MenuItem x:Name="OpenBin" Header=".bin" Click="OpenBin_Click">
                     </MenuItem>
                     <MenuItem x:Name="OpenXml" Header=".xml" Click="OpenXml_Click">
                     </MenuItem>
@@ -35,7 +35,7 @@
                     </MenuItem>
                 </MenuItem>
                 <MenuItem x:Name="MenuSave" Header="{DynamicResource save}">
-                    <MenuItem x:Name="SaveBin" Header=".bin" Click="SaveBin_Click">                        
+                    <MenuItem x:Name="SaveBin" Header=".bin" Click="SaveBin_Click">
                     </MenuItem>
                     <MenuItem x:Name="SaveXml" Header=".xml" Click="SaveXml_Click">
                     </MenuItem>
@@ -44,11 +44,14 @@
                 </MenuItem>
             </MenuItem>
         </Menu>
-        <Button x:Name="ClearButton" Height="30" Margin="22,37,545,3" Click="ClearButton_Click" Grid.Column="1">
+        <Button Grid.Column="1" Grid.Row="0" Name="PusButon" Content="+" Click="PlusButon_Click" Width="20" Height="20" Margin="23,27,567,23"></Button>
+        <Button Grid.Column="1" Grid.Row="0" Name="MinusButton" Content="-" Click="MinusButton_Click" Width="20" Height="20" Margin="23,52,567,388" Grid.RowSpan="2"></Button>
+
+        <Button x:Name="ClearButton" Height="30" Margin="72,37,495,3" Click="ClearButton_Click" Grid.Column="1">
             <Image Source = "Properties\Images\Clear.png" Width="25" Height="23"/>
         </Button>
-        <Button x:Name="Triangle" Grid.Column="1" Content="{DynamicResource triangle}" Width="100" Height="30" Margin="92,37,418,3" Click="Triangle_Click"/>
-        <Button x:Name="Circle" Grid.Column="1" Content="{DynamicResource circle}" Width="100" Height="30" Margin="232,37,278,3" Click="Circle_Click"/>
+        <Button x:Name="Triangle" Grid.Column="1" Content="{DynamicResource triangle}" Width="100" Height="30" Margin="135,37,375,3" Click="Triangle_Click"/>
+        <Button x:Name="Circle" Grid.Column="1" Content="{DynamicResource circle}" Width="100" Height="30" Margin="255,37,255,3" Click="Circle_Click"/>
         <Button x:Name="Square" Grid.Column="1" Content="{DynamicResource square}" Width="100" Height="30" Margin="374,37,136,3" Click="Square_Click"/>
 
         <Canvas x:Name="CanvasWindow" Background="#8ECAE6" Grid.Column="1" Grid.Row="1" Height="380" MinHeight="300" Width="600" HorizontalAlignment="Left" VerticalAlignment="Center"/>

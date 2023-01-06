@@ -1,9 +1,9 @@
-﻿using MovingShapes.Models;
+﻿using MovingShapes.Events;
+using MovingShapes.Models;
 using MovingShapes.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
 using WpfFunctionalLibrary;
@@ -81,6 +81,8 @@ namespace MovingShapes
             ShapesList.Items.Add($"{circle.Name} {circle.CurrentNumber} \n");
             _countOfMovingShapes++;
             ChangeButtonsContent();
+
+            MakeSound();
         }
 
         private void ShapesList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
@@ -318,6 +320,36 @@ namespace MovingShapes
                 ShapesSerialization.SerializeToJson(_shapes);
                 //ClearButton_Click(sender, e);
             }
+        }
+
+        private void PlusButon_Click(object sender, RoutedEventArgs e)
+        {
+            if (ShapesList.SelectedItems.Count != 0)
+            {
+                _shapes[ShapesList.SelectedIndex].ShapesIntersection += ShapesIntersected;
+            }
+        }
+
+        private void MinusButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (ShapesList.SelectedItems.Count != 0)
+            {
+                _shapes[ShapesList.SelectedIndex].ShapesIntersection -= ShapesIntersected;
+            }
+        }
+
+        private void ShapesIntersected(object? sender, ShapesIntersectionEventArgs e)
+        {
+            MakeSound();
+            WritePointOfIntersectionToConsole(e.PointOfIntersection);
+        }
+        private void MakeSound()
+        {
+            Console.Beep();
+        }
+        private void WritePointOfIntersectionToConsole(Point point)
+        {
+            Console.WriteLine(point);
         }
     }
 }

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -17,6 +18,7 @@ namespace MovingShapes.Models
         private Point _p1;
         private Point _p2;
         private Point _p3;
+        private Dictionary<CustomShape, bool> _intersectedTriangles = new Dictionary<CustomShape, bool>();
 
         [NonSerialized]
         private Line line1;
@@ -171,6 +173,58 @@ namespace MovingShapes.Models
             canvas.Children.Add(line2);
             canvas.Children.Add(line3);
             Draw();
+        }
+
+        public override async Task CheckForIntersection(List<CustomShape> shapes)
+        {
+            if (!IsEventShapesIntersectionNull())
+            {
+                foreach (CustomShape shape in shapes)
+                {
+                    if (shape.GetType() != typeof(CustomTriangle) || shape.GetHashCode() == GetHashCode())
+                    {
+                        continue;
+                    }
+                    var vector = new Vector(shape.Position.X - Position.X, shape.Position.Y - Position.Y);
+                    bool isAlreadyIntersected = true;
+                    if (vector.Length <= 2 * GetOuterRadius())
+                    {
+                        try
+                        {
+                            isAlreadyIntersected = _intersectedTriangles[shape];
+                        }
+                        catch (KeyNotFoundException)
+                        {
+                            _intersectedTriangles.Add(shape, false);
+                            isAlreadyIntersected = _intersectedTriangles[shape];
+                        }
+
+                        if (!isAlreadyIntersected)
+                        {
+                            _intersectedTriangles[shape] = true;
+                            var intersectionPoint = new Point((shape.Position.X + Position.X) / 2.0, (shape.Position.Y + Position.Y) / 2.0);
+                            await Task.Run(() => { Intersected(null, new ShapesIntersectionEventArgs(ref intersectionPoint)); });
+                        }
+                    }
+                    else if (isAlreadyIntersected && vector.Length > 2 * GetOuterRadius())
+                    {
+                        _intersectedTriangles[shape] = false;
+                    }
+                }
+            }
+        }
+
+        private double GetOuterRadius()
+        {
+            double radius;
+            var vector1 = new Vector(line1.X1 - line1.X2, line1.Y1 - line1.Y2);
+            var vector2 = new Vector(line2.X1 - line2.X2, line2.Y1 - line2.Y2);
+            var vector3 = new Vector(line3.X1 - line3.X2, line3.Y1 - line3.Y2);
+
+            double semiPerimeter = (vector1.Length + vector2.Length + vector3.Length) / 2;
+            double area = Math.Sqrt(semiPerimeter*(semiPerimeter - vector1.Length) * (semiPerimeter - vector2.Length) * (semiPerimeter - vector3.Length));
+            radius = 1 / 4.0 * vector1.Length * vector2.Length * vector3.Length / area;
+            return radius;
         }
 
         //public override void ShapesIntersected(object sender, ShapesIntersectionEventArgs e)

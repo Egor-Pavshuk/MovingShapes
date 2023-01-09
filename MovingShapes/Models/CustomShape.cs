@@ -1,6 +1,8 @@
 ﻿using MovingShapes.Events;
 using System;
+using System.Collections.Generic;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -27,10 +29,15 @@ namespace MovingShapes.Models
         abstract public void Move(ref Point maxPoint);
         abstract public void Draw();
         abstract public void AddToCanvas(Canvas canvas);
+        abstract public Task CheckForIntersection(List<CustomShape> shapes);
         public event EventHandler<ShapesIntersectionEventArgs>? ShapesIntersection;
-        protected void Intersected(object sender, ShapesIntersectionEventArgs e)
+        protected void Intersected(object? sender, ShapesIntersectionEventArgs e)
         {
             OnShapesIntersected(sender, e);
+        }
+        protected bool IsEventShapesIntersectionNull()
+        {
+            return Volatile.Read(ref ShapesIntersection) is null;
         }
         protected void OnShapesIntersected(object? sender, ShapesIntersectionEventArgs e)
         {

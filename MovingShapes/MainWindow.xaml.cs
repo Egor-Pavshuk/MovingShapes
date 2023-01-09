@@ -4,6 +4,7 @@ using MovingShapes.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Windows;
 using System.Windows.Threading;
 using WpfFunctionalLibrary;
@@ -52,10 +53,11 @@ namespace MovingShapes
                 {
                     var point = new Point(CanvasWindow.ActualWidth, CanvasWindow.ActualHeight);
                     shape.Move(ref point);
+                    shape.CheckForIntersection(_shapes);
                 }
             }
         }
-
+        #region Add shape
         private void Triangle_Click(object sender, RoutedEventArgs e)
         {
             CustomShape triangle = new CustomTriangle(CanvasWindow) { Name = _dictionary["triangle"], CurrentNumber = _shapes.Where(s => s.GetType().Name == typeof(CustomTriangle).Name).Count() + 1 };
@@ -81,10 +83,8 @@ namespace MovingShapes
             ShapesList.Items.Add($"{circle.Name} {circle.CurrentNumber} \n");
             _countOfMovingShapes++;
             ChangeButtonsContent();
-
-            MakeSound();
         }
-
+        #endregion
         private void ShapesList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             if (ShapesList.SelectedItems.Count != 0)
@@ -240,7 +240,7 @@ namespace MovingShapes
                 ShapesList.Items.Add($"{shape.Name} {shape.CurrentNumber} \n");
             }
         }
-
+        #region Open/Save
         private void OpenBin_Click(object sender, RoutedEventArgs e)
         {
             ClearButton_Click(sender, e);
@@ -321,12 +321,15 @@ namespace MovingShapes
                 //ClearButton_Click(sender, e);
             }
         }
-
+        #endregion
         private void PlusButon_Click(object sender, RoutedEventArgs e)
         {
             if (ShapesList.SelectedItems.Count != 0)
             {
                 _shapes[ShapesList.SelectedIndex].ShapesIntersection += ShapesIntersected;
+                var selectedItem = ShapesList.SelectedItem;
+                selectedItem = new StringBuilder(selectedItem.ToString()).Append(" *");
+                ShapesList.Items[ShapesList.SelectedIndex] = selectedItem;
             }
         }
 
@@ -335,6 +338,9 @@ namespace MovingShapes
             if (ShapesList.SelectedItems.Count != 0)
             {
                 _shapes[ShapesList.SelectedIndex].ShapesIntersection -= ShapesIntersected;
+                var selectedItem = ShapesList.SelectedItem;
+                selectedItem = new StringBuilder(selectedItem.ToString()).Replace(" *", "");
+                ShapesList.Items[ShapesList.SelectedIndex] = selectedItem;
             }
         }
 

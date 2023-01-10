@@ -340,9 +340,12 @@ namespace MovingShapes
             {
                 _shapes[ShapesList.SelectedIndex].ShapesIntersection -= ShapesIntersected;
 
-                var selectedItem = ShapesList.SelectedItem;
-                selectedItem = new StringBuilder(selectedItem.ToString()).Replace(" *", "");
-                ShapesList.Items[ShapesList.SelectedIndex] = selectedItem;
+                var selectedItem = ShapesList.SelectedItem.ToString();
+                if (selectedItem != null && selectedItem.LastIndexOf('*') - 1 > 0)
+                {
+                    var newItem = new StringBuilder(selectedItem).Remove(selectedItem.LastIndexOf('*') - 1, 2);
+                    ShapesList.Items[ShapesList.SelectedIndex] = newItem;
+                }
             }
         }
 

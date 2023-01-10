@@ -1,7 +1,6 @@
 ﻿using MovingShapes.Events;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Serialization;
 using System.Threading.Tasks;
 using System.Windows;
@@ -18,13 +17,13 @@ namespace MovingShapes.Models
         private const int _side = 40;
         [NonSerialized]
         private Rectangle _rectangle;
-        private SolidColorBrush _colorBrush;
-        private Dictionary<CustomShape, bool> _intersectedSquares = new Dictionary<CustomShape, bool>();
+        [NonSerialized]
+        private SolidColorBrush _colorBrush = new((Color)ColorConverter.ConvertFromString("#FB8500"));
+        private Dictionary<CustomShape, bool> _intersectedSquares = new();
 
         public CustomSquare()
         {
             _isDeserialized = true;
-            _colorBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFB703"));
             _rectangle = new Rectangle() { Width = _side, Height = _side, Fill = _colorBrush, StrokeThickness = 1, Stroke = Brushes.DarkSlateBlue };
         }
         public CustomSquare(Canvas canvas)
@@ -32,9 +31,8 @@ namespace MovingShapes.Models
             Name = "Square";
             MoveStepX = _moveStepX;
             MoveStepY = _moveStepY;
-            _colorBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFB703"));
             Position = RandomPoint.GetRadomPoint((int)canvas.ActualWidth - 2 * _side, (int)canvas.ActualHeight - 2 * _side);
-            _rectangle = new Rectangle() { Width = _side, Height = _side, Fill =_colorBrush, StrokeThickness = 1, Stroke = Brushes.DarkSlateBlue };
+            _rectangle = new Rectangle() { Width = _side, Height = _side, Fill = _colorBrush, StrokeThickness = 1, Stroke = Brushes.DarkSlateBlue };
             canvas.Children.Add(_rectangle);
 
             Draw();
@@ -77,7 +75,8 @@ namespace MovingShapes.Models
         {
             if (_rectangle is null)
             {
-                _rectangle = new Rectangle() { Width = _side, Height = _side, Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFB703")), StrokeThickness = 1, Stroke = Brushes.DarkSlateBlue };
+                _colorBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FB8500"));
+                _rectangle = new Rectangle() { Width = _side, Height = _side, Fill = _colorBrush, StrokeThickness = 1, Stroke = Brushes.DarkSlateBlue };
             }
         }
         public override void AddToCanvas(Canvas canvas)

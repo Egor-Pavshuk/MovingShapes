@@ -327,6 +327,7 @@ namespace MovingShapes
             if (ShapesList.SelectedItems.Count != 0)
             {
                 _shapes[ShapesList.SelectedIndex].ShapesIntersection += ShapesIntersected;
+
                 var selectedItem = ShapesList.SelectedItem;
                 selectedItem = new StringBuilder(selectedItem.ToString()).Append(" *");
                 ShapesList.Items[ShapesList.SelectedIndex] = selectedItem;
@@ -338,6 +339,7 @@ namespace MovingShapes
             if (ShapesList.SelectedItems.Count != 0)
             {
                 _shapes[ShapesList.SelectedIndex].ShapesIntersection -= ShapesIntersected;
+
                 var selectedItem = ShapesList.SelectedItem;
                 selectedItem = new StringBuilder(selectedItem.ToString()).Replace(" *", "");
                 ShapesList.Items[ShapesList.SelectedIndex] = selectedItem;

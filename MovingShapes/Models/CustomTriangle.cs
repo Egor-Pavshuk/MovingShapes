@@ -222,7 +222,7 @@ namespace MovingShapes.Models
             var vector3 = new Vector(line3.X1 - line3.X2, line3.Y1 - line3.Y2);
 
             double semiPerimeter = (vector1.Length + vector2.Length + vector3.Length) / 2;
-            double area = Math.Sqrt(semiPerimeter*(semiPerimeter - vector1.Length) * (semiPerimeter - vector2.Length) * (semiPerimeter - vector3.Length));
+            double area = Math.Sqrt(semiPerimeter * (semiPerimeter - vector1.Length) * (semiPerimeter - vector2.Length) * (semiPerimeter - vector3.Length));
             radius = 1 / 4.0 * vector1.Length * vector2.Length * vector3.Length / area;
             return radius;
         }

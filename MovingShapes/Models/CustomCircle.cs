@@ -1,9 +1,7 @@
 ﻿using MovingShapes.Events;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Serialization;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,12 +17,14 @@ namespace MovingShapes.Models
         private const int _radius = 40;
         [NonSerialized]
         private Ellipse _circle;
-        private Dictionary<CustomShape, bool> _intersectedCircles = new Dictionary<CustomShape, bool>();
+        [NonSerialized]
+        private SolidColorBrush _colorBrush = new((Color)ColorConverter.ConvertFromString("#FB8500"));
+        private Dictionary<CustomShape, bool> _intersectedCircles = new();
 
         public CustomCircle()
         {
             _isDeserialized = true;
-            _circle = new Ellipse() { Width = _radius, Height = _radius, Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FB8500")), StrokeThickness = 1, Stroke = Brushes.DarkSlateBlue };
+            _circle = new Ellipse() { Width = _radius, Height = _radius, Fill = _colorBrush, StrokeThickness = 1, Stroke = Brushes.DarkSlateBlue };
         }
         public CustomCircle(Canvas canvas)
         {
@@ -33,7 +33,7 @@ namespace MovingShapes.Models
             MoveStepY = _moveStepY;
             Position = RandomPoint.GetRadomPoint((int)canvas.ActualWidth - 2 * _radius, (int)canvas.ActualHeight - 2 * _radius);
 
-            _circle = new Ellipse() { Width = _radius, Height = _radius, Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FB8500")), StrokeThickness = 1, Stroke = Brushes.DarkSlateBlue };
+            _circle = new Ellipse() { Width = _radius, Height = _radius, Fill = _colorBrush, StrokeThickness = 1, Stroke = Brushes.DarkSlateBlue };
 
             canvas.Children.Add(_circle);
 
@@ -85,7 +85,7 @@ namespace MovingShapes.Models
                     bool isAlreadyIntersected = true;
 
                     if (vector.Length <= _radius)
-                    {                        
+                    {
                         try
                         {
                             isAlreadyIntersected = _intersectedCircles[shape];
@@ -100,7 +100,10 @@ namespace MovingShapes.Models
                         {
                             _intersectedCircles[shape] = true;
                             var intersectionPoint = new Point((shape.Position.X + Position.X) / 2.0, (shape.Position.Y + Position.Y) / 2.0);
-                            await Task.Run(() => { Intersected(_circle, new ShapesIntersectionEventArgs(ref intersectionPoint)); });
+                            await Task.Run(() =>
+                            {
+                                Intersected(_circle, new ShapesIntersectionEventArgs(ref intersectionPoint));
+                            });
                         }
                     }
                     else if (isAlreadyIntersected && vector.Length > _radius)
@@ -109,12 +112,20 @@ namespace MovingShapes.Models
                     }
                 }
             }
+            else
+            {
+                _circle.Fill = _colorBrush;
+            }
         }
 
         [OnDeserialized]
         public void OnDeserialized(StreamingContext context)
         {
-            _circle ??= new Ellipse() { Width = _radius, Height = _radius, Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FB8500")), StrokeThickness = 1, Stroke = Brushes.DarkSlateBlue };
+            if (_circle is null)
+            {
+                _colorBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FB8500"));
+                _circle ??= new Ellipse() { Width = _radius, Height = _radius, Fill = _colorBrush, StrokeThickness = 1, Stroke = Brushes.DarkSlateBlue };
+            }
         }
         public override void AddToCanvas(Canvas canvas)
         {

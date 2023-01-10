@@ -30,6 +30,8 @@ namespace MovingShapes.Models
         abstract public void Draw();
         abstract public void AddToCanvas(Canvas canvas);
         abstract public Task CheckForIntersection(List<CustomShape> shapes);
+
+        [field: NonSerialized]
         public event EventHandler<ShapesIntersectionEventArgs>? ShapesIntersection;
         protected void Intersected(object? sender, ShapesIntersectionEventArgs e)
         {

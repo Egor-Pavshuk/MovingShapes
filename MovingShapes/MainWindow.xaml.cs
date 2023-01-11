@@ -1,4 +1,6 @@
 ﻿using MovingShapes.Events;
+using MovingShapes.Exceptions;
+using MovingShapes.Exceptions.CustomException;
 using MovingShapes.Models;
 using MovingShapes.Resources;
 using System;
@@ -52,7 +54,14 @@ namespace MovingShapes
                 if (!shape.IsStoped)
                 {
                     var point = new Point(CanvasWindow.ActualWidth, CanvasWindow.ActualHeight);
-                    shape.Move(ref point);
+                    try
+                    {
+                        shape.Move(ref point);
+                    }
+                    catch (CustomException<ShapeIsOutOfWindowExceptionArgs>)
+                    {
+                        shape.ReturnShapeToWindow(ref point);
+                    }
                     shape.CheckForIntersection(_shapes);
                 }
             }

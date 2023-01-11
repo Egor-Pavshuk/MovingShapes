@@ -1,4 +1,6 @@
 ﻿using MovingShapes.Events;
+using MovingShapes.Exceptions;
+using MovingShapes.Exceptions.CustomException;
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
@@ -54,11 +56,11 @@ namespace MovingShapes.Models
             _p3.X = 100;
             _p3.Y = 60;
 
-            Position = RandomPoint.GetRadomPoint((int)canvas.ActualWidth - GetMaxSide(), (int)canvas.ActualHeight - GetMaxSide());
-
             line1 = new Line() { X1 = _p1.X, X2 = _p2.X, Y1 = _p1.Y, Y2 = _p2.Y, Stroke = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#023047")) };
             line2 = new Line() { X1 = _p1.X, X2 = _p3.X, Y1 = _p1.Y, Y2 = _p3.Y, Stroke = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#023047")) };
             line3 = new Line() { X1 = _p3.X, X2 = _p2.X, Y1 = _p3.Y, Y2 = _p2.Y, Stroke = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#023047")) };
+
+            Position = RandomPoint.GetRadomPoint((int)canvas.ActualWidth - 2 * (int)GetOuterRadius(), (int)canvas.ActualHeight - 2 * (int)GetOuterRadius());
 
             _p1 = Vector.Add(new Vector(Position.X, Position.Y), _p1);
             _p2 = Vector.Add(new Vector(Position.X, Position.Y), _p2);
@@ -79,6 +81,7 @@ namespace MovingShapes.Models
 
         public override void Move(ref Point maxPoint)
         {
+            CheckForShapeIsOutOfWindow(ref maxPoint);
             if (_isDeserialized)
             {
                 _p1 = Vector.Add(new Vector(Position.X, Position.Y), new Point(60, 0));
@@ -124,25 +127,6 @@ namespace MovingShapes.Models
             Position = new Point(Position.X, Position.Y + _moveStepY);
 
             Draw();
-        }
-
-        private int GetMaxSide()
-        {
-            List<Vector> vectors = new List<Vector>()
-            {
-                new Vector(_p1.X - _p2.X, _p1.Y - _p2.Y),
-                new Vector(_p1.X - _p3.X, _p1.Y - _p3.Y),
-                new Vector(_p3.X - _p2.X, _p3.Y - _p2.Y)
-            };
-            int maxSide = (int)vectors[0].Length;
-            foreach (var vector in vectors)
-            {
-                if (vector.Length > maxSide)
-                {
-                    maxSide = (int)vector.Length;
-                }
-            }
-            return maxSide;
         }
 
         [OnDeserialized]
@@ -213,6 +197,27 @@ namespace MovingShapes.Models
                 }
             }
         }
+        public override void ReturnShapeToWindow(ref Point maxPoint)
+        {
+            double radius = GetOuterRadius();
+            if (Position.Y + radius < maxPoint.Y && Position.X + 2 * radius > maxPoint.X)
+            {
+                Position = new Point(maxPoint.X - 2.5 * radius, Position.Y);
+            }
+            else if (Position.X + 2 * radius < maxPoint.X && Position.Y + radius > maxPoint.Y)
+            {
+                Position = new Point(Position.X, maxPoint.Y - 1.5 * radius);
+            }
+            else if (Position.X + 2 * radius > maxPoint.X && Position.Y + radius > maxPoint.Y)
+            {
+                Position = new Point(maxPoint.X - 2.5 * radius, maxPoint.Y - 1.5 * radius);
+            }
+            Vector translateVector = new(Position.X, Position.Y);
+            _p1 = Vector.Add(translateVector, new Point(line1.X1, line1.Y1));
+            _p2 = Vector.Add(translateVector, new Point(line1.X2, line1.Y2));
+            _p3 = Vector.Add(translateVector, new Point(line2.X2, line1.Y2));
+            Draw();
+        }
 
         private double GetOuterRadius()
         {
@@ -227,9 +232,13 @@ namespace MovingShapes.Models
             return radius;
         }
 
-        //public override void ShapesIntersected(object sender, ShapesIntersectionEventArgs e)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        protected override void CheckForShapeIsOutOfWindow(ref Point maxPoint)
+        {
+            double radius = GetOuterRadius();
+            if (Position.X + 2 * radius > maxPoint.X || Position.Y + radius > maxPoint.Y)
+            {
+                throw new CustomException<ShapeIsOutOfWindowExceptionArgs>(new ShapeIsOutOfWindowExceptionArgs(this));
+            }
+        }
     }
 }

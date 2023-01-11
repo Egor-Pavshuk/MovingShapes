@@ -28,6 +28,8 @@ namespace MovingShapes.Models
 
         abstract public void Move(ref Point maxPoint);
         abstract public void Draw();
+        abstract protected void CheckForShapeIsOutOfWindow(ref Point maxPoint);
+        abstract public void ReturnShapeToWindow(ref Point maxPoint);
         abstract public void AddToCanvas(Canvas canvas);
         abstract public Task CheckForIntersection(List<CustomShape> shapes);
 
@@ -49,6 +51,5 @@ namespace MovingShapes.Models
                 temp(sender, e);
             }
         }
-        //abstract public void ShapesIntersected(object sender, ShapesIntersectionEventArgs e);
     }
 }

@@ -1,4 +1,6 @@
 ﻿using MovingShapes.Events;
+using MovingShapes.Exceptions;
+using MovingShapes.Exceptions.CustomException;
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
@@ -45,6 +47,7 @@ namespace MovingShapes.Models
 
         public override void Move(ref Point maxPoint)
         {
+            CheckForShapeIsOutOfWindow(ref maxPoint);
             if (_isDeserialized)
             {
                 _moveStepX = MoveStepX;
@@ -129,9 +132,28 @@ namespace MovingShapes.Models
             }
         }
 
-        //public override void ShapesIntersected(object sender, ShapesIntersectionEventArgs e)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        protected override void CheckForShapeIsOutOfWindow(ref Point maxPoint)
+        {
+            if (Position.X + _side > maxPoint.X || Position.Y + _side > maxPoint.Y)
+            {
+                throw new CustomException<ShapeIsOutOfWindowExceptionArgs>(new ShapeIsOutOfWindowExceptionArgs(this));
+            }
+        }
+        public override void ReturnShapeToWindow(ref Point maxPoint)
+        {
+            if (Position.Y + _side < maxPoint.Y && Position.X + _side > maxPoint.X)
+            {
+                Position = new Point(maxPoint.X - _side, Position.Y);
+            }
+            else if (Position.X + _side < maxPoint.X && Position.Y + _side > maxPoint.Y)
+            {
+                Position = new Point(Position.X, maxPoint.Y - _side);
+            }
+            else if (Position.X + _side > maxPoint.X && Position.Y + _side > maxPoint.Y)
+            {
+                Position = new Point(maxPoint.X - _side, maxPoint.Y - _side);
+            }
+            Draw();
+        }
     }
 }

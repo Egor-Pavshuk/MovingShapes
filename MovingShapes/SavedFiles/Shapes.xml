@@ -5,65 +5,142 @@
     <Name xsi:type="xsd:string">Triangle</Name>
     <CurrentNumber>1</CurrentNumber>
     <MoveStepX>3</MoveStepX>
-    <MoveStepY>3</MoveStepY>
+    <MoveStepY>-3</MoveStepY>
     <Position>
-      <X>425</X>
-      <Y>260</Y>
+      <X>776</X>
+      <Y>341</Y>
     </Position>
   </CustomShape>
   <CustomShape xsi:type="CustomTriangle">
     <IsStoped>false</IsStoped>
     <Name xsi:type="xsd:string">Triangle</Name>
     <CurrentNumber>2</CurrentNumber>
-    <MoveStepX>-3</MoveStepX>
-    <MoveStepY>3</MoveStepY>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
     <Position>
-      <X>494</X>
-      <Y>239</Y>
+      <X>857</X>
+      <Y>362</Y>
     </Position>
   </CustomShape>
   <CustomShape xsi:type="CustomCircle">
     <IsStoped>false</IsStoped>
     <Name xsi:type="xsd:string">Circle</Name>
     <CurrentNumber>1</CurrentNumber>
-    <MoveStepX>-3</MoveStepX>
+    <MoveStepX>3</MoveStepX>
     <MoveStepY>-3</MoveStepY>
     <Position>
-      <X>410</X>
-      <Y>68</Y>
+      <X>953</X>
+      <Y>65</Y>
     </Position>
   </CustomShape>
   <CustomShape xsi:type="CustomCircle">
     <IsStoped>false</IsStoped>
     <Name xsi:type="xsd:string">Circle</Name>
     <CurrentNumber>2</CurrentNumber>
-    <MoveStepX>-3</MoveStepX>
+    <MoveStepX>3</MoveStepX>
     <MoveStepY>-3</MoveStepY>
     <Position>
-      <X>449</X>
-      <Y>190</Y>
+      <X>914</X>
+      <Y>193</Y>
     </Position>
   </CustomShape>
   <CustomShape xsi:type="CustomSquare">
     <IsStoped>false</IsStoped>
     <Name xsi:type="xsd:string">Square</Name>
     <CurrentNumber>1</CurrentNumber>
-    <MoveStepX>-3</MoveStepX>
+    <MoveStepX>3</MoveStepX>
     <MoveStepY>-3</MoveStepY>
     <Position>
-      <X>549</X>
-      <Y>181</Y>
+      <X>810</X>
+      <Y>184</Y>
     </Position>
   </CustomShape>
   <CustomShape xsi:type="CustomSquare">
     <IsStoped>false</IsStoped>
     <Name xsi:type="xsd:string">Square</Name>
     <CurrentNumber>2</CurrentNumber>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+    <Position>
+      <X>946</X>
+      <Y>311</Y>
+    </Position>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>false</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>3</CurrentNumber>
     <MoveStepX>-3</MoveStepX>
     <MoveStepY>-3</MoveStepY>
     <Position>
-      <X>415</X>
-      <Y>314</Y>
+      <X>908</X>
+      <Y>226</Y>
+    </Position>
+  </CustomShape>
+  <CustomShape xsi:type="CustomTriangle">
+    <IsStoped>false</IsStoped>
+    <Name xsi:type="xsd:string">Triangle</Name>
+    <CurrentNumber>4</CurrentNumber>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+    <Position>
+      <X>1217</X>
+      <Y>352</Y>
+    </Position>
+  </CustomShape>
+  <CustomShape xsi:type="CustomCircle">
+    <IsStoped>false</IsStoped>
+    <Name xsi:type="xsd:string">Circle</Name>
+    <CurrentNumber>3</CurrentNumber>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+    <Position>
+      <X>1016</X>
+      <Y>534</Y>
+    </Position>
+  </CustomShape>
+  <CustomShape xsi:type="CustomCircle">
+    <IsStoped>false</IsStoped>
+    <Name xsi:type="xsd:string">Circle</Name>
+    <CurrentNumber>4</CurrentNumber>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+    <Position>
+      <X>640</X>
+      <Y>446</Y>
+    </Position>
+  </CustomShape>
+  <CustomShape xsi:type="CustomSquare">
+    <IsStoped>false</IsStoped>
+    <Name xsi:type="xsd:string">Square</Name>
+    <CurrentNumber>3</CurrentNumber>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+    <Position>
+      <X>925</X>
+      <Y>495</Y>
+    </Position>
+  </CustomShape>
+  <CustomShape xsi:type="CustomSquare">
+    <IsStoped>false</IsStoped>
+    <Name xsi:type="xsd:string">Square</Name>
+    <CurrentNumber>4</CurrentNumber>
+    <MoveStepX>3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+    <Position>
+      <X>1002</X>
+      <Y>337</Y>
+    </Position>
+  </CustomShape>
+  <CustomShape xsi:type="CustomCircle">
+    <IsStoped>false</IsStoped>
+    <Name xsi:type="xsd:string">Circle</Name>
+    <CurrentNumber>5</CurrentNumber>
+    <MoveStepX>-3</MoveStepX>
+    <MoveStepY>-3</MoveStepY>
+    <Position>
+      <X>668</X>
+      <Y>583</Y>
     </Position>
   </CustomShape>
 </ArrayOfCustomShape>

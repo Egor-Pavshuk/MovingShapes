@@ -5,24 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MovingShapes"
         mc:Ignorable="d"
-        Title="Moving shapes" Height="494" Width="810" MinWidth="810" MinHeight="494">
+        Title="Moving shapes" Name="mainWindow" Height="494" Width="810" MinWidth="810" MinHeight="494">
 
-    <Grid HorizontalAlignment="Left" Width="800">
+    <Grid HorizontalAlignment="Left">
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
-            <RowDefinition Height="390"/>
+            <RowDefinition Height="{Binding ElementName=mainWindow, Path=ActualHeight}"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="195"/>
-            <ColumnDefinition Width="610"/>
+            <ColumnDefinition Width="{Binding ElementName=mainWindow, Path=ActualWidth}"/>
         </Grid.ColumnDefinitions>
 
 
-        <ListBox x:Name="ShapesList" Grid.Column="0" Grid.Row="1" Width="195" Height="380" SelectionChanged="ShapesList_SelectionChanged" VerticalAlignment="Center" BorderThickness="1">
+        <ListBox x:Name="ShapesList" Grid.Column="0" Grid.Row="1" Width="auto" MinHeight="380" SelectionChanged="ShapesList_SelectionChanged" BorderThickness="1" Margin="0,8,0,92"/>
 
-        </ListBox>
-
-        <ComboBox x:Name="LanguageList" Grid.Column="1" Width="80" Height="25"  VerticalAlignment="Top" HorizontalAlignment="Left" BorderThickness="2" Margin="500,39,0,0" SelectionChanged="LanguageList_SelectionChanged"/>
+        <ComboBox x:Name="LanguageList" Grid.Column="1" Width="80" Height="25" BorderThickness="2" Margin="502,32,228,12" SelectionChanged="LanguageList_SelectionChanged"/>
 
         <Menu Grid.Column="0" Grid.ColumnSpan="2" Height="24" VerticalAlignment="Top">
             <MenuItem Header="{DynamicResource file}" FontSize="14">
@@ -44,19 +42,22 @@
                 </MenuItem>
             </MenuItem>
         </Menu>
-        <Button Grid.Column="1" Grid.Row="0" Name="PusButon" Content="+" Click="PlusButon_Click" Width="20" Height="20" Margin="23,27,567,23"></Button>
-        <Button Grid.Column="1" Grid.Row="0" Name="MinusButton" Content="-" Click="MinusButton_Click" Width="20" Height="20" Margin="23,52,567,388" Grid.RowSpan="2"></Button>
+        <Button Grid.Column="1" Grid.Row="0" Name="PusButon" Content="+" Click="PlusButon_Click" Width="20" Height="20" Margin="19,25,771,25"></Button>
+        <Button Grid.Column="1" Grid.Row="0" Name="MinusButton" Content="-" Click="MinusButton_Click" Width="20" Margin="19,47,771,3" Height="20"/>
 
-        <Button x:Name="ClearButton" Height="30" Margin="72,37,495,3" Click="ClearButton_Click" Grid.Column="1">
+
+        <Button x:Name="ClearButton" Grid.Column="1" Grid.Row="0" Width="35" Height="30" Margin="60,30,715,10" Click="ClearButton_Click">
             <Image Source = "Properties\Images\Clear.png" Width="25" Height="23"/>
         </Button>
-        <Button x:Name="Triangle" Grid.Column="1" Content="{DynamicResource triangle}" Width="100" Height="30" Margin="135,37,375,3" Click="Triangle_Click"/>
-        <Button x:Name="Circle" Grid.Column="1" Content="{DynamicResource circle}" Width="100" Height="30" Margin="255,37,255,3" Click="Circle_Click"/>
-        <Button x:Name="Square" Grid.Column="1" Content="{DynamicResource square}" Width="100" Height="30" Margin="374,37,136,3" Click="Square_Click"/>
+        <Button x:Name="Triangle" Grid.Column="1" Grid.Row="0" Content="{DynamicResource triangle}" Width="100" Height="30" Margin="114,30,596,10" Click="Triangle_Click"/>
+        <Button x:Name="Circle" Grid.Column="1" Grid.Row="0" Content="{DynamicResource circle}" Width="100" Height="30" Margin="241,30,469,10" Click="Circle_Click"/>
+        <Button x:Name="Square" Grid.Column="1" Grid.Row="0" Content="{DynamicResource square}" Width="100" Height="30" Margin="367,30,343,10" Click="Square_Click"/>
 
-        <Canvas x:Name="CanvasWindow" Background="#8ECAE6" Grid.Column="1" Grid.Row="1" Height="380" MinHeight="300" Width="600" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Button x:Name="StopRunButton" Grid.Column="0" Content="{DynamicResource stop}" Height="30" Click="StopRunButton_Click" VerticalAlignment="Top" Margin="10,37,110,0"/>
-        <Button x:Name="StopRunAllButton" Grid.Column="0" Content="{DynamicResource stopAll}" Height="30"  Click="StopRunAllButton_Click" VerticalAlignment="Top" Margin="111,37,10,0"/>
+        <Canvas x:Name="CanvasWindow" Background="#8ECAE6" Grid.Column="1" Grid.Row="1" MinWidth="600"  MinHeight="365" Margin="0,8,210,108">
+            <ContentControl Height="385" Width="615" HorizontalAlignment="Left" VerticalAlignment="Center"></ContentControl>
+        </Canvas>
+        <Button x:Name="StopRunButton" Grid.Column="0" Grid.Row="0" Content="{DynamicResource stop}" Height="30" Click="StopRunButton_Click" VerticalAlignment="Top" Margin="10,37,110,0"/>
+        <Button x:Name="StopRunAllButton" Grid.Column="0" Grid.Row="0" Content="{DynamicResource stopAll}" Height="30"  Click="StopRunAllButton_Click" VerticalAlignment="Top" Margin="111,37,10,0"/>
 
     </Grid>
 </Window>

@@ -1,6 +1,7 @@
 ﻿using MovingShapes.Events;
 using MovingShapes.Exceptions;
 using MovingShapes.Exceptions.CustomException;
+using MovingShapes.Logging;
 using MovingShapes.Models;
 using MovingShapes.Resources;
 using System;
@@ -60,6 +61,7 @@ namespace MovingShapes
                     }
                     catch (CustomException<ShapeIsOutOfWindowExceptionArgs>)
                     {
+                        _ = Logger.LogExceptionAsync(new ShapeIsOutOfWindowExceptionArgs(shape).Message, DateTime.Now);
                         shape.ReturnShapeToWindow(ref point);
                     }
                     shape.CheckForIntersection(_shapes);

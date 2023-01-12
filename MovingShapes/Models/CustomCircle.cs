@@ -160,11 +160,5 @@ namespace MovingShapes.Models
             }
             Draw();
         }
-
-        //public override void ShapesIntersected(object sender, ShapesIntersectionEventArgs e)
-        //{
-        //    _circle.Fill = Brushes.Black;
-        //    //throw new NotImplementedException();
-        //}
     }
 }

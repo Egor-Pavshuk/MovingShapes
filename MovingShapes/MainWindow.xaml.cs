@@ -8,7 +8,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Shapes;
 using System.Windows.Threading;
 using WpfFunctionalLibrary;
 
@@ -64,10 +68,15 @@ namespace MovingShapes
                         _ = Logger.LogExceptionAsync(new ShapeIsOutOfWindowExceptionArgs(shape).Message, DateTime.Now);
                         shape.ReturnShapeToWindow(ref point);
                     }
+                    finally
+                    {
+                        shape.Draw();                      
+                    }
                     shape.CheckForIntersection(_shapes);
                 }
             }
         }
+
         #region Add shape
         private void Triangle_Click(object sender, RoutedEventArgs e)
         {

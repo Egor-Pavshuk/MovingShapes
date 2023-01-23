@@ -4,6 +4,7 @@ using MovingShapes.Exceptions.CustomException;
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -71,7 +72,6 @@ namespace MovingShapes.Models
 
             Position = new Point(Position.X + _moveStepX, Position.Y);
             Position = new Point(Position.X, Position.Y + _moveStepY);
-            Draw();
         }
         public override async Task CheckForIntersection(List<CustomShape> shapes)
         {
@@ -158,7 +158,6 @@ namespace MovingShapes.Models
             {
                 Position = new Point(maxPoint.X - _radius, maxPoint.Y - _radius);
             }
-            Draw();
         }
     }
 }

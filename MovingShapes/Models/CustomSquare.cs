@@ -69,8 +69,6 @@ namespace MovingShapes.Models
 
             Position = new Point(Position.X + _moveStepX, Position.Y);
             Position = new Point(Position.X, Position.Y + _moveStepY);
-
-            Draw();
         }
 
         [OnDeserialized]
@@ -153,7 +151,6 @@ namespace MovingShapes.Models
             {
                 Position = new Point(maxPoint.X - _side, maxPoint.Y - _side);
             }
-            Draw();
         }
     }
 }

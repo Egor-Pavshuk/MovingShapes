@@ -8,7 +8,6 @@
     <Authors>Pavshuk Egor</Authors>
     <NeutralLanguage>en</NeutralLanguage>
     <ApplicationIcon>shapes.ico</ApplicationIcon>
-    <Version>1.1.1.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

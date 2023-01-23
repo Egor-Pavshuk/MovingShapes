@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Shapes;
 
 namespace MovingShapes.Models
 {
@@ -19,6 +20,7 @@ namespace MovingShapes.Models
         public int MoveStepX { get; set; }
         public int MoveStepY { get; set; }
         protected bool _isDeserialized;
+        protected readonly object _drawlock = new();
         public Point Position { get; set; }
 
         public CustomShape()
